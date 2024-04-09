@@ -42,8 +42,8 @@ Notify Email Recipients With Attached Reports
 
     ${suite_name_split}=     Split String    ${suite_name}    separator=.
     ${subject}=        Set Variable       Test Suite "${suite_name_split}[0]" Has Completed
-    ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. Nam blandit mollis urna laoreet luctus. Vestibulum \n
-    ...                                   efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue \n
+    ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. Nam blandit mollis urna laoreet luctus. Vestibulum
+    ...                                   efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue
     ...                                   arcu, ac tristique tellus aliquet ut. Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
 
     #Filepath needs to be given as from the .py file
