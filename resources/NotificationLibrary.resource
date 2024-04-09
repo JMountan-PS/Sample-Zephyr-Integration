@@ -28,11 +28,7 @@ Notify Email Recipients
     ${suite_name_split}=     Split String    ${suite_name}    separator=.
     ${subject}=        Set Variable       Test Suite "${suite_name_split}[0]" Has Completed
     Log To Console     ${subject}
-    ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. 
-    ...                                   Nam blandit mollis urna laoreet luctus. Vestibulum efficitur libero orci. 
-    ...                                   Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. 
-    ...                                   In aliquet augue arcu, ac tristique tellus aliquet ut. 
-    ...                                   Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
+    ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. Nam blandit mollis urna laoreet luctus. Vestibulum efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue arcu, ac tristique tellus aliquet ut. Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
 
     Send Email To Many        ${subject}                  ${body}                   ${user}              ${notify_list}         ${user}           ${APPPASSGMAIL}
 
