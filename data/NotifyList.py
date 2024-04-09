@@ -1,5 +1,5 @@
 notify_list = [
-    'example1@copado.com',
+    'jmountan@copado.com',
     'example2@gmail.com',
     'example3@outlook.com'
 ]
