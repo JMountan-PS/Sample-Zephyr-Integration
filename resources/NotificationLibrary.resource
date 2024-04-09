@@ -44,6 +44,8 @@ Notify Email Recipients With Attached Reports
 
     #Filepath needs to be given as from the .py file
     @{files}=             Create List    ${OUTPUT_DIR}/log.html     ${OUTPUT_DIR}/report.html    ${OUTPUT_DIR}/output.xml   
+    ${directory_contents}=               List Directory             ${OUTPUT_DIR}
+    Log To Console                       ${directory_contents}
     Send Email Attachments To Many    
     ...                ${subject}                  
     ...                ${body}                   
