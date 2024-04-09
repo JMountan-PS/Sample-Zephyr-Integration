@@ -30,6 +30,6 @@ Notify Email Recipients
     Log To Console     ${subject}
 
     #Cannot contain any special characters, including the "..." line continuation unless this is encoded.
-    ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. Nam blandit mollis urna laoreet luctus. Vestibulum efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue arcu, ac tristique tellus aliquet ut. Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
+    ${body}=           Set Variable       Lorem ipsum dolor sit amet https://qentinelqi.github.io/shop/ Praesent bibendum fringilla.
 
     Send Email To Many        ${subject}                  ${body}                   ${user}              ${notify_list}         ${user}           ${APPPASSGMAIL}
