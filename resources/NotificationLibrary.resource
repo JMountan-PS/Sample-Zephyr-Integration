@@ -15,9 +15,6 @@ Variables              ../data/NotifyList.py
 *** Variables ***
 ${user}                   #Gmail Account being used to send the email 
 ${APPPASSGMAIL}           #Gmail Account App Pass being used to send the email
-${sender}                 #Email Address being used as the name of the sender
-${subject}               
-${replyTo}                    
 
 *** Keywords ***
 
@@ -27,9 +24,6 @@ Notify Email Recipients
 
     ${suite_name_split}=     Split String    ${suite_name}    separator=.
     ${subject}=        Convert To String      Test Suite "${suite_name_split}[0]" Has Completed
-    Log To Console     ${subject}
-
-    #Cannot contain any special characters, including the "..." line continuation unless this is encoded.
     ${body}=           Convert To String       Lorem ipsum dolor sit amet \n\n\n\n https://qentinelqi.github.io/shop/ \n\n\n\n Praesent bibendum fringilla.
 
-    Send Email To Many        ${subject}                  ${body}                   ${user}              ${notify_list}         ${user}           ${APPPASSGMAIL}
+    Send Email To Many        ${subject}                  ${body}                   ${user}            ${notify_list}         ${user}           ${APPPASSGMAIL}
