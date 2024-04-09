@@ -35,7 +35,7 @@ Notify Email Recipients
     Send Email To Many        ${subject}                  ${body}                   ${user}              ${notify_list}         ${user}           ${APPPASSGMAIL}
 
 Notify Email Recipients With Attached Reports
-    [Documentation]    Attaches log.html, output.xml, and report.html to the email being sent to the notify list
+    [Documentation]    Attaches output.xml to the email being sent to the notify list
     [Arguments]        ${suite_name}
 
     ${suite_name_split}=     Split String    ${suite_name}    separator=.
@@ -43,7 +43,7 @@ Notify Email Recipients With Attached Reports
     ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. Nam blandit mollis urna laoreet luctus. Vestibulum efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue arcu, ac tristique tellus aliquet ut. Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
 
     #Filepath needs to be given as from the .py file
-    @{files}=             Create List    ${OUTPUT_DIR}/log.html     ${OUTPUT_DIR}/report.html    ${OUTPUT_DIR}/output.xml   
+    @{files}=             Create List    ${OUTPUT_DIR}/output.xml   
     ${directory_contents}=               List Directory             ${OUTPUT_DIR}
     Log To Console                       ${directory_contents}
     Send Email Attachments To Many    
