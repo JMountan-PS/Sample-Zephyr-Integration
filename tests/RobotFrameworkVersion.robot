@@ -2,7 +2,7 @@
 Library                     DateTime
 Library                     String
 
-#Import Robot Framework "Listener"
+#Import Robot Framework "Listener" and custom email generator
 Resource                    ../resources/ZephyrCallout.resource
 Resource                    ../resources/NotificationLibrary.resource
 
