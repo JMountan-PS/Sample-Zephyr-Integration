@@ -28,7 +28,11 @@ Notify Email Recipients
     ...                                   efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue \n
     ...                                   arcu, ac tristique tellus aliquet ut. Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
     ${to_addresses}=                       Evaluate    ", ".join(${notify_list})
-    Send Email         ${subject}                  ${body}                   ${sender}              jmountan@copado.com         ${user}           ${APPPASSGMAIL}
+
+    ${body}=                        Set Variable       test2
+    ${subject}=                     Set Variable       test2
+
+    Send Email         ${subject}                  ${body}                   ${user}              ${to_addresses}         ${user}           ${APPPASSGMAIL}
 
 
 Notify Email Recipients With Attached Reports
