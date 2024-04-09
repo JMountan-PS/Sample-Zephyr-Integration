@@ -28,6 +28,8 @@ Notify Email Recipients
     ${suite_name_split}=     Split String    ${suite_name}    separator=.
     ${subject}=        Set Variable       Test Suite "${suite_name_split}[0]" Has Completed
     Log To Console     ${subject}
+
+    #Cannot contain any special characters, including the "..." line continuation unless this is encoded.
     ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. Nam blandit mollis urna laoreet luctus. Vestibulum efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue arcu, ac tristique tellus aliquet ut. Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
 
     Send Email To Many        ${subject}                  ${body}                   ${user}              ${notify_list}         ${user}           ${APPPASSGMAIL}
@@ -38,9 +40,7 @@ Notify Email Recipients With Attached Reports
 
     ${suite_name_split}=     Split String    ${suite_name}    separator=.
     ${subject}=        Set Variable       Test Suite "${suite_name_split}[0]" Has Completed
-    ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. Nam blandit mollis urna laoreet luctus. Vestibulum
-    ...                                   efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue
-    ...                                   arcu, ac tristique tellus aliquet ut. Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
+    ${body}=           Set Variable       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac euismod mi. Nam blandit mollis urna laoreet luctus. Vestibulum efficitur libero orci. Ut lobortis, dolor id scelerisque vulputate, eros dui tempor neque, eu posuere neque felis non erat. In aliquet augue arcu, ac tristique tellus aliquet ut. Vivamus vestibulum metus quis dui rutrum, sed blandit arcu pellentesque. Praesent bibendum fringilla.
 
     #Filepath needs to be given as from the .py file
     @{files}=             Create List    ${OUTPUT_DIR}/log.html     ${OUTPUT_DIR}/report.html    ${OUTPUT_DIR}/output.xml   
