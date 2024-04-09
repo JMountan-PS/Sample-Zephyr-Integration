@@ -55,7 +55,7 @@ def send_email_many(subject, body, sender, recipients, user, password):
     msg['Subject'] = subject
     msg['From'] = sender
     msg['To'] = recipients
-    msg.attach(MIMEText())
+    msg.attach(MIMEText(body))
 
     smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
     smtp_server.login(user, password)
