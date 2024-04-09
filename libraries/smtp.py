@@ -49,3 +49,16 @@ def send_email_Attachments(subject, body, sender, recipients, user, password, fi
     smtp_server.sendmail(sender, recipients, msg.as_string())
     logger.warn("mail send")
     smtp_server.quit()
+
+def send_email_many(subject, body, sender, recipients, user, password):
+    msg = MIMEMultipart()
+    msg['Subject'] = subject
+    msg['From'] = sender
+    msg['To'] = recipients
+    msg.attach(MIMEText())
+
+    smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+    smtp_server.login(user, password)
+    smtp_server.sendmail(sender, recipients, msg.as_string())
+    logger.warn("mail send")
+    smtp_server.quit()
