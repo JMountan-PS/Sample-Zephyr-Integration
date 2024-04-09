@@ -10,7 +10,7 @@ Resource                    ../resources/NotificationLibrary.resource
 Suite Setup                 Setup Work                  #Authorize with this call
 Test Setup                  Start Test Case Timer
 Test Teardown               Post New Result                ${TEST STATUS}    ${TEST MESSAGE}    #Update Cycle after test case run
-Suite Teardown              Notify Email Recipients With Attached Reports    ${SUITE NAME}
+Suite Teardown              Notify Email Recipients    ${SUITE NAME}
 
 *** Test Cases ***
 Test Case 001
