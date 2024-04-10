@@ -11,11 +11,6 @@ Library                ../libraries/smtp.py
 #Required variable import for the users to receive notifications
 Variables              ../data/NotifyList.py
 
-
-*** Variables ***
-${user}                   #Gmail Account being used to send the email 
-${APPPASSGMAIL}           #Gmail Account App Pass being used to send the email
-
 *** Keywords ***
 
 Notify Email Recipients
