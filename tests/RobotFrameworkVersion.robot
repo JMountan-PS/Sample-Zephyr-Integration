@@ -24,8 +24,6 @@ Test Case 002
     [Documentation]         This test case will Fail
     Fail
 
-
-
 *** Keywords ***
 Setup Work
     Authorize Zephyr API
